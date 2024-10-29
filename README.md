@@ -51,15 +51,16 @@
   - Renames the current branch to new given name.
   - The -M flag forces the rename, even if there’s already a branch with that name.
 - git branch -M new-branch-name
-  -
 
-## git remote add remote-name url-of-global-repo
+## git remote add remote-name url-of-remote-repo
+- Adds a remote repository with the specified name and URL, allowing you to connect your local project to a remote repository
 
 ## git remote -v
+- Displays the names and URLs of all remotes associated with the repository, showing whether each URL is used for fetching or pushing.
 
-## git push 
+## git push -u origin main
 
-## git pull
+## git pull origin main
 
 ## git config
 - To set your username and email in Git
