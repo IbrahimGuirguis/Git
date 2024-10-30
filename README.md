@@ -25,7 +25,7 @@
   - git config user.name
   - git config user.email
 
-## After user name and email configuration
+## After username and email configuration
 - Navigate to your project directory in the CLI.
 - Now I am in a local project; where the Git is? To let Git start working on your project, you have to use the git init command to initialize or create a repository to include the project's files in Git, so let's start with the first command, which is git init.
 
