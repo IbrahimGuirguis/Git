@@ -14,7 +14,7 @@
 - Hint: After creating the repository, Git will add a hidden .git folder to your project. This folder contains all the files Git needs to track your project’s history and changes.
 - Now we have created a repository, we are in need to start adding and tracking project files. Let's move on to the second command, which is git add.
 
-## git add file-name, <*> or <.>
+## git add file-name, * or .
 - Start tracking specified project files.
 - Once you have created a Git repository, your project files will be untracked by the Git. To let Git start tracking project files, use the git add command to let it track files.
 - Using * or . instead of file-name will let all project files be tracked.
