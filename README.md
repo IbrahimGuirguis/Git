@@ -42,15 +42,21 @@
 - When checking out a commit, you enter a "detached HEAD" state, where you can view or work from that point in the project history, but changes won't be associated with any branch unless you create a new branch from it.
 
 ## git branch
-- List, create, or delete branches
+- List, create, rename, or delete branches
 - git branch
   - List all branches.
 - git branch branch-name
   - create branch with the given name.
 - git branch -M new-branch-name
-  - Renames the current branch to new given name.
+  - Renames the current branch to the new given name.
   - The -M flag forces the rename, even if there’s already a branch with that name.
-- git branch -M new-branch-name
+- git branch -m old-branch-name new-branch-name 
+  - Renames the specified branch to the new branch name without needing to switch (checkout) to it first.
+- git branch -d branch-name
+  - Deletes the specified branch from your local repository. Note that this command only works if the branch has been fully merged; otherwise, Git will prevent the deletion to avoid losing changes.
+
+## git merge branch-name-to-be-merged
+- Merges the specified branch into the current branch, combining the changes from both branches.
 
 ## git remote add remote-name url-of-remote-repo
 - Adds a remote repository with the specified name and URL, allowing you to connect your local project to a remote repository
@@ -59,8 +65,10 @@
 - Displays the names and URLs of all remotes associated with the repository, showing whether each URL is used for fetching or pushing.
 
 ## git push -u origin main
+- Uploads (pushes) changes from the local main branch to the remote main branch on the remote repository named origin. The -u flag sets the upstream branch, so future git push commands can be used without specifying the branch name.
 
 ## git pull origin main
+- Downloads (pulls) the latest changes from the remote main branch on origin and merges them into your local main branch, keeping your local branch up-to-date with the remote.
 
 ## git config
 - To set your username and email in Git
@@ -76,5 +84,3 @@
 - Or, to check the configuration in the current repository:
   - git config user.name
   - git config user.email
-
-  
