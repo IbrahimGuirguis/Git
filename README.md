@@ -6,7 +6,27 @@
 
 ## Commands
 - Most Git commands starts with git keyword to tell the system that you are using Git.
-- Firstly navigate to your project directory in the CLI.
+- First, ensure that Git is installed successfully by running the git --version command.
+- Let’s start by configuring Git for global use or for hosting services like GitHub, so let's move on to the first command, git config.
+
+## git config
+- Set username and email in Git
+- Git requires a username and email to identify the author of each commit.
+- Use global configuration if you want to use the same username and email across all your Git repositories.
+  - git config --global user.name "Your Name"
+  - git config --global user.email "your_email@example.com"
+- Use specific repository configuration If you want to use a different username and email for a specific project, navigate to the project directory and run
+  - git config user.name "Your Name"
+  - git config user.email "your_email@example.com"
+- To check that the information was set correctly for global configuration, you can use
+  - git config --global user.name
+  - git config --global user.email
+- Or, to check the configuration in the current repository
+  - git config user.name
+  - git config user.email
+
+## After user name and email configuration
+- Navigate to your project directory in the CLI.
 - Now I am in a local project; where the Git is? To let Git start working on your project, you have to use the git init command to initialize or create a repository to include the project's files in Git, so let's start with the first command, which is git init.
 
 ## git init
@@ -36,10 +56,13 @@
 ## git log
 - Displays a complete history of all commits made in the project, showing details like commit hashes, author names, dates, and commit messages.
 
-## git checkout commit-hash or branch-name 
+## git checkout commit-hash or branch-name
 - Switches to a specific branch or a specific commit.
 - When checking out a branch, you switch to the latest commit on that branch.
 - When checking out a commit, you enter a "detached HEAD" state, where you can view or work from that point in the project history, but changes won't be associated with any branch unless you create a new branch from it.
+
+## git checkout -b branch-name
+- Creates a new branch with the specified name and immediately switches to it.
 
 ## git branch
 - List, create, rename, or delete branches
@@ -70,17 +93,5 @@
 ## git pull origin main
 - Downloads (pulls) the latest changes from the remote main branch on origin and merges them into your local main branch, keeping your local branch up-to-date with the remote.
 
-## git config
-- To set your username and email in Git
-- Global Configuration (Applies to all repositories on your system) This is useful if you want to use the same username and email across all your Git repositories.
-  - git config --global user.name "Your Name"
-  - git config --global user.email "your_email@example.com"
-- Repository-Specific Configuration (Applies only to the current repository) If you want to use a different username and email for a specific project, navigate to the project directory and run
-  - git config user.name "Your Name"
-  - git config user.email "your_email@example.com"
-- Verifying Configuration To verify that the information was set correctly, you can use
-  - git config --global user.name
-  - git config --global user.email
-- Or, to check the configuration in the current repository:
-  - git config user.name
-  - git config user.email
+## git clone url-of-remote-repo
+- Creates a local copy of a remote repository, including all its files, branches, and commit history.
